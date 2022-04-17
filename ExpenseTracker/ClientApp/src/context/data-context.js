@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DataCellInput from "../components/DataCellInput";
-import { dateValueConverter, numberValueConverter } from "../value-converters";
+import { dateValueConverter, numberValueConverter } from "../utils/value-converters";
 
 const DataContext = React.createContext({
     data: [],
