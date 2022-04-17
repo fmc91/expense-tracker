@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracker", "ExpenseTracker\ExpenseTracker.csproj", "{D0FC0138-03A1-45B9-B531-A1272F406C74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseTracker", "ExpenseTracker\ExpenseTracker.csproj", "{D0FC0138-03A1-45B9-B531-A1272F406C74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpensesData", "ExpensesData\ExpensesData.csproj", "{98BF50F1-BD21-42D8-AD3D-DEBED082BC00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseData", "ExpenseData\ExpenseData.csproj", "{98BF50F1-BD21-42D8-AD3D-DEBED082BC00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
