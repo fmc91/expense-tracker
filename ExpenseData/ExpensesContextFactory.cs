@@ -13,7 +13,7 @@ namespace ExpensesData
         public ExpensesContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ExpensesContext>()
-                .UseSqlite(@"Data Source=C:\Users\fazal\source\repos\ExpenseTracker\ExpensesData\expenses.db");
+                .UseSqlite(@"Data Source=C:\Users\fazal\source\repos\ExpenseTracker\ExpenseData\expenses.db");
 
             return new ExpensesContext(optionsBuilder.Options);
         }

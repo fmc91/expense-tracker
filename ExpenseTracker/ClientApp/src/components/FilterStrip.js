@@ -1,6 +1,6 @@
 import React from "react";
 import InputGroup from "./InputGroup";
-import { dateValueConverter } from "../value-converters";
+import { dateValueConverter } from "../utils/value-converters";
 import styles from "./FilterStrip.module.css";
 
 export default function FilterStrip(props) {

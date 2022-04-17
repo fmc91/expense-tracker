@@ -21,7 +21,7 @@ namespace ExpenseTracker
 
             builder.Services.AddControllers();
             builder.Services.AddDbContext<ExpensesContext>(options =>
-                options.UseSqlite(@"Data Source=C:\Users\fazal\source\repos\ExpenseTracker\ExpensesData\expenses.db"));
+                options.UseSqlite(@"Data Source=C:\Users\fazal\source\repos\ExpenseTracker\ExpenseData\expenses.db"));
 
             var app = builder.Build();
 
@@ -34,8 +34,7 @@ namespace ExpenseTracker
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseRouting();
-            app.UseEndpoints(builder => builder.MapControllers());
+            app.MapControllers();
 
             await SeedDataAsync(app);
 
