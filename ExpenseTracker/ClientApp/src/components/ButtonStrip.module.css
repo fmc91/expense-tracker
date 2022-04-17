@@ -1,0 +1,29 @@
+
+.buttonStrip {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 8px;
+}
+
+.undocked {
+    width: 100%;
+}
+
+.filterToggle {
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filterToggle[ischecked] {
+    background-color: rgb(200, 200, 200);
+}
+
+.filterToggle[ischecked]:active {
+    background-color: rgb(210, 210, 210);
+}
+
+.filterToggle img {
+    width: 24px
+}

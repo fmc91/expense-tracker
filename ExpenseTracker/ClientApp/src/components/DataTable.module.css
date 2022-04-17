@@ -1,0 +1,93 @@
+.dataTable {
+    font-family: "Calibri" sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.headerRow {
+    background-color: rgb(218, 218, 218);
+    border-bottom: 1px solid black;
+}
+
+.headerRow th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.dataRow {
+    padding: 8px 0;
+    background-color: rgb(245, 245, 245);
+}
+
+.dataRow:nth-child(even) {
+    background-color: rgb(230, 230, 230);
+}
+
+.headerCell {
+    font-weight: 600;
+    text-align: left;
+    padding: 4px 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.headerCellContents {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.headerCellText {
+    width: 100%;
+}
+
+.sortIcon {
+    width: 18px;
+}
+
+.tableCell {
+    padding: 4px 24px;
+    user-select: none;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+img.rowFunction {
+    width: 16px;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.dataCellInput {
+    font-size: 9pt;
+    display: block;
+    width: 100%;
+    padding: 3px 6px;
+    margin: 2px 0;
+    border: 1px solid rgb(0, 66, 136);
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px rgba(180, 180, 180, 0.5);
+}
+
+.dataCellInput[type="date"] {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.dataCellInput:focus {
+    outline: 1px solid rgba(190, 235, 255, 0.5);
+    background-color: rgb(225, 245, 255);
+}
+
+.dataCellInput.input__error {
+    border-color: red;
+}
+
+.dataCellInput.input__error:focus {
+    background-color: rgb(255, 220, 220);
+}
