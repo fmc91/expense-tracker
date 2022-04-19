@@ -18,25 +18,27 @@ namespace ExpenseTracker.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Expense>> GetAsync()
+        public async Task<IActionResult> GetAsync()
         {
-            return await _db.Expense.ToListAsync();
+            var result = await _db.Expense.ToListAsync();
+
+            return Ok(result);
         }
 
         [Route("{id:int}")]
         [HttpGet]
-        public async Task<ActionResult<Expense>> GetAsync(int id)
+        public async Task<IActionResult> GetAsync(int id)
         {
             var result = await _db.Expense.FindAsync(id);
 
             if (result == null)
                 return NotFound();
 
-            return result;
+            return Ok(result);
         }
 
         [HttpPost]
-        public async Task<ActionResult> PostAsync([FromBody] Expense item)
+        public async Task<IActionResult> PostAsync([FromBody] Expense item)
         {
             if (item.ExpenseId != 0)
                 return BadRequest();
@@ -49,7 +51,7 @@ namespace ExpenseTracker.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> PutAsync([FromBody] Expense item)
+        public async Task<IActionResult> PutAsync([FromBody] Expense item)
         {
             if (!_db.Expense.Any(e => e.ExpenseId == item.ExpenseId))
                 return NotFound();
@@ -63,7 +65,7 @@ namespace ExpenseTracker.Controllers
 
         [Route("{id:int}")]
         [HttpDelete]
-        public async Task<ActionResult> DeleteAsync(int id)
+        public async Task<IActionResult> DeleteAsync(int id)
         {
             var expense = await _db.Expense.FindAsync(id);
 
