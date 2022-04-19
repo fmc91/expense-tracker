@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using ExpensesData;
 
 namespace ExpenseTracker
@@ -21,7 +22,7 @@ namespace ExpenseTracker
 
             builder.Services.AddControllers();
             builder.Services.AddDbContext<ExpensesContext>(options =>
-                options.UseSqlite(@"Data Source=C:\Users\fazal\source\repos\ExpenseTracker\ExpenseData\expenses.db"));
+                options.UseSqlite(builder.Configuration.GetConnectionString("ExpensesDatabase")));
 
             var app = builder.Build();
 

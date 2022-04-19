@@ -12,6 +12,8 @@
 
 # Database
 *.db
+*.db-shm
+*.db-wal
 Migrations/
 
 # Build results
